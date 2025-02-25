@@ -1,0 +1,83 @@
+/* Az alap stílusok */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;  /* Magasság 100%-ra */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ff6f61, #6a5acd, #00bcd4, #ffcc00); /* Színátmenet */
+    background-size: 400% 400%;  /* Nagyobb háttérméret a simább animációhoz */
+    animation: gradientAnimation 10s ease infinite; /* Animáció */
+}
+
+/* Animáció a színátmenethez */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Form stílusok */
+.registration-container, .login-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Átlátszó fekete háttér */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;  /* Maximális szélesség */
+}
+
+/* Címek és űrlap stílusok */
+h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00bcd4;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0097a7;
+}
+
+p {
+    color: #fff;
+}
+
+a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisztráció</title>
+    <link rel="stylesheet" href="regisztraciocss.css"> <!-- Itt hivatkozunk a CSS fájlra -->
+</head>
+<body>
+
+    <div class="registration-container">
+        <h1>Regisztráció</h1>
+        <form id="registrationForm" onsubmit="return registerUser()">
+            <input type="text" id="username" placeholder="Felhasználónév" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="password" id="password" placeholder="Jelszó" required>
+            <button type="submit">Regisztrálj</button>
+        </form>
+        <p>Már van fiókod? <a href="bejelentkezes.html">Jelentkezz be itt!</a></p>
+    </div>
+
+    <script>
+        function registerUser() {
+            // Felhasználó adatainak tárolása a localStorage-ban
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Ellenőrizzük, hogy van-e már regisztrálva felhasználó
+            if (localStorage.getItem("userRegistered")) {
+                alert("Már regisztráltál!");
+                window.location.href = "bejelentkezes.html";  // Ha már regisztrált, irányítjuk a bejelentkezés oldalra
+                return false;
+            }
+
+            // Tároljuk a felhasználó adatokat
+            localStorage.setItem("userName", username);
+            localStorage.setItem("userEmail", email);
+            localStorage.setItem("userPassword", password);
+            localStorage.setItem("userRegistered", true);  // Ez jelzi, hogy már regisztrált
+
+            alert("Sikeres regisztráció!");
+
+            // Regisztráció után átirányítjuk a bejelentkezés oldalra
+            window.location.href = "bejelentkezes.html";
+            return false;
+        }
+    </script>
+
+</body>
+</html>
+

@@ -19,7 +19,9 @@
                 event.preventDefault(); // Megakadályozza a form elküldését
             } else {
                 // Ha minden rendben, irányítson a főoldalra
-                window.location.href = "fooldal.html";
+                setTimeout(function() {
+                    window.location.href = "fooldal.html";
+                }, 500); // Pici késleltetés az átirányításhoz
             }
         }
     </script>

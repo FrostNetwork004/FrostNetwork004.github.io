@@ -5,12 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bejelentkezés</title>
     <link rel="stylesheet" href="bejelentkezescss.css">
+    <script>
+        // Funkció, amely ellenőrzi, hogy a form kitöltött-e, és ha igen, átirányít
+        function checkForm(event) {
+            // Az űrlap mezőinek lekérése
+            const username = document.querySelector('input[type="text"]');
+            const password = document.querySelector('input[type="password"]');
+
+            // Ellenőrizzük, hogy mindkét mező ki van-e töltve
+            if (username.value === "" || password.value === "") {
+                // Ha nem töltötték ki, akkor ne küldje el az űrlapot
+                alert("Kérlek, töltsd ki az összes mezőt!");
+                event.preventDefault(); // Megakadályozza a form elküldését
+            } else {
+                // Ha minden rendben, irányítson a főoldalra
+                window.location.href = "fooldal.html";
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <div class="login-box">
             <h2>Bejelentkezés</h2>
-            <form>
+            <form onsubmit="checkForm(event)">
                 <div class="input-box">
                     <span class="icon">🔹</span>
                     <input type="text" required placeholder="Felhasználónév">
@@ -29,4 +47,3 @@
     </div>
 </body>
 </html>
-

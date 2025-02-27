@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regisztráció</title>
     <link rel="stylesheet" href="regisztraciocss.css">
+    <script>
+        function handleRegistration(event) {
+            event.preventDefault(); // Megakadályozza az alapértelmezett űrlapküldést
+            alert("Sikeres regisztráció!");
+            window.location.href = "bejelentkezes.html"; // Átirányítás
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <form class="register-form">
+        <form class="register-form" onsubmit="handleRegistration(event)">
             <h2>Regisztráció</h2>
             <input type="text" placeholder="Felhasználónév" required>
             <input type="email" placeholder="Email" required>

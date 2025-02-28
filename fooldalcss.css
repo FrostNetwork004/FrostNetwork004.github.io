@@ -1,7 +1,8 @@
+/* Alap stílusok */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: #1a1a1a;
+    background: #1a1a1a; /* Sötét háttér */
     color: #fff;
     display: flex;
     justify-content: center;
@@ -10,13 +11,14 @@ body {
     flex-direction: column;
 }
 
+/* Fejléc stílusok */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 20px 50px;
-    background: linear-gradient(135deg, #0a1f0a, #1b3b1b);
+    background: linear-gradient(135deg, #0a1f0a, #1b3b1b); /* Sötét zöldes háttér */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -32,6 +34,7 @@ h1 {
     margin: 0;
 }
 
+/* Navigáció */
 .nav-bar ul {
     list-style: none;
     display: flex;
@@ -51,10 +54,11 @@ h1 {
     background-color: #4CAF50;
 }
 
+/* Fő szekció */
 .main-section {
     text-align: center;
     padding: 60px;
-    background: linear-gradient(135deg, #111, #3a4e3a);
+    background: linear-gradient(135deg, #111, #3a4e3a); /* Sötét hátterek és zöldes átmenet */
     width: 100%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
     border-radius: 15px;
@@ -73,6 +77,7 @@ h1 {
     color: #ccc;
 }
 
+/* Webshop és Discord gombok */
 .button-container {
     display: flex;
     justify-content: center;
@@ -110,6 +115,7 @@ h1 {
     transform: scale(1.05);
 }
 
+/* Animáció a háttérben */
 @keyframes moving-stripes {
     0% {
         background-position: -200% 0;

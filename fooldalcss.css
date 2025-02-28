@@ -80,7 +80,10 @@ h1 {
 /* Webshop és Discord gombok */
 .button-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Gombok balra és jobbra */
+    width: 100%;
+    max-width: 500px; /* Gombok ne terjedjenek túl szélesre */
+    margin: 0 auto;
     gap: 20px;
 }
 

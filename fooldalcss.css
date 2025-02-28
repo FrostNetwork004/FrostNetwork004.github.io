@@ -1,8 +1,7 @@
-/* Alap stílusok */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: #1a1a1a; /* Sötét háttér */
+    background: #1a1a1a;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -11,26 +10,19 @@ body {
     flex-direction: column;
 }
 
-/* Fejléc stílusok */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 20px 50px;
-    background: linear-gradient(135deg, #0a1f0a, #1b3b1b); /* Sötét zöldes háttér */
+    background: linear-gradient(135deg, #0a1f0a, #1b3b1b);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
     display: flex;
     align-items: center;
-}
-
-.logo-img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
 }
 
 h1 {
@@ -40,7 +32,6 @@ h1 {
     margin: 0;
 }
 
-/* Navigáció */
 .nav-bar ul {
     list-style: none;
     display: flex;
@@ -60,11 +51,10 @@ h1 {
     background-color: #4CAF50;
 }
 
-/* Fő szekció */
 .main-section {
     text-align: center;
     padding: 60px;
-    background: linear-gradient(135deg, #111, #3a4e3a); /* Sötét hátterek és zöldes átmenet */
+    background: linear-gradient(135deg, #111, #3a4e3a);
     width: 100%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
     border-radius: 15px;
@@ -83,17 +73,26 @@ h1 {
     color: #ccc;
 }
 
-/* Webshop gomb */
-.webshop-button {
-    background-color: #4CAF50; /* Szép zöld gomb */
-    color: white;
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.webshop-button, .discord-button {
     font-size: 1.5rem;
     padding: 15px 30px;
     border-radius: 25px;
     text-decoration: none;
     display: inline-block;
+    font-weight: bold;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.webshop-button {
+    background-color: #4CAF50;
+    color: white;
 }
 
 .webshop-button:hover {
@@ -101,7 +100,16 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Animáció a háttérben */
+.discord-button {
+    background-color: #5865F2;
+    color: white;
+}
+
+.discord-button:hover {
+    background-color: #4852c9;
+    transform: scale(1.05);
+}
+
 @keyframes moving-stripes {
     0% {
         background-position: -200% 0;

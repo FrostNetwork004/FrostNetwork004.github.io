@@ -80,11 +80,9 @@ h1 {
 /* Webshop és Discord gombok */
 .button-container {
     display: flex;
-    justify-content: space-between; /* Gombok balra és jobbra */
-    width: 100%;
-    max-width: 500px; /* Gombok ne terjedjenek túl szélesre */
+    justify-content: space-between; /* A két gomb széthúzása */
+    width: 80%; /* Itt megadhatjuk a sáv szélességét */
     margin: 0 auto;
-    gap: 20px;
 }
 
 .webshop-button, .discord-button {
@@ -109,7 +107,7 @@ h1 {
 }
 
 .discord-button {
-    background-color: #5865F2;
+    background-color: #5865F2; /* Kék szín */
     color: white;
 }
 

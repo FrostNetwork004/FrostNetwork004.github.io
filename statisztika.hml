@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statisztika</title>
+    <title>Szerver Statisztika</title>
     <link rel="stylesheet" href="statisztikacss.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
                 <li><a href="fooldal.html">Főoldal</a></li>
                 <li><a href="about.html">Rólunk</a></li>
                 <li><a href="services.html">Szolgáltatások</a></li>
-                <li><a href="statisztika.html">Statisztika</a></li>
+                <li><a href="statisztika.html">Statisztika</a></li> <!-- A Statisztika link, amely most a részletes statisztika oldalra mutat -->
                 <li><a href="contact.html">Kapcsolat</a></li>
             </ul>
         </nav>
@@ -29,6 +29,21 @@
         <p><strong>Szerver IP:</strong> frostnetwork.mcgame.hu</p>
         <p><strong>Discord szerver:</strong> <a href="https://discord.gg/XZWWNpWukR" target="_blank">Csatlakozz</a></p>
         <p><strong>Játékmódok:</strong> Survival, Skyblock, Minigames</p>
+
+        <h3>Tulajdonosok:</h3>
+        <ul>
+            <li>rhxxn_716</li>
+            <li>Danikillhu</li>
+            <li>És még sok más...</li>
+        </ul>
+
+        <h3>Szerver állapot:</h3>
+        <p><strong>Aktuális státusz:</strong> Online</p>
+        <p><strong>Játékosok száma:</strong> 120 / 500</p>
+
+        <p><a href="https://discord.gg/XZWWNpWukR" target="_blank" class="btn">Csatlakozz a Discord szerverünkhöz</a></p>
+
+        <a href="fooldal.html" class="btn">Vissza a főoldalra</a> <!-- Gomb a főoldalra való visszatéréshez -->
     </section>
 
 </body>

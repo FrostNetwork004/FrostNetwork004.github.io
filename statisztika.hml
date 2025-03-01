@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statisztika</title>
+    <link rel="stylesheet" href="statisztikacss.css">
+</head>
+<body>
 
+    <header class="header">
+        <div class="logo">
+            <h1>FrostNetwork</h1>
+        </div>
+
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="fooldal.html">Főoldal</a></li>
+                <li><a href="about.html">Rólunk</a></li>
+                <li><a href="services.html">Szolgáltatások</a></li>
+                <li><a href="statisztika.html">Statisztika</a></li>
+                <li><a href="contact.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="stats-section">
+        <h2>Szerver Statisztikák</h2>
+        <p><strong>Szerver IP:</strong> frostnetwork.mcgame.hu</p>
+        <p><strong>Discord szerver:</strong> <a href="https://discord.gg/XZWWNpWukR" target="_blank">Csatlakozz</a></p>
+        <p><strong>Játékmódok:</strong> Survival, Skyblock, Minigames</p>
+    </section>
+
+</body>
+</html>

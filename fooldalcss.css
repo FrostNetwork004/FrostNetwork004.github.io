@@ -1,8 +1,8 @@
-/* Alap stílusok */
+/* Alap beállítások */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: #1a1a1a; /* Sötét háttér */
+    background: #1a1a1a;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -11,30 +11,25 @@ body {
     flex-direction: column;
 }
 
-/* Fejléc stílusok */
+/* Fejléc */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 20px 50px;
-    background: linear-gradient(135deg, #0a1f0a, #1b3b1b); /* Sötét zöldes háttér */
+    background: linear-gradient(135deg, #0a1f0a, #1b3b1b);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-h1 {
+.logo h1 {
     font-size: 2.5rem;
     font-weight: bold;
     color: #fff;
     margin: 0;
 }
 
-/* Navigáció */
+/* Navigációs menü */
 .nav-bar ul {
     list-style: none;
     display: flex;
@@ -58,7 +53,7 @@ h1 {
 .main-section {
     text-align: center;
     padding: 60px;
-    background: linear-gradient(135deg, #111, #3a4e3a); /* Sötét hátterek és zöldes átmenet */
+    background: linear-gradient(135deg, #111, #3a4e3a);
     width: 100%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
     border-radius: 15px;
@@ -77,12 +72,12 @@ h1 {
     color: #ccc;
 }
 
-/* Webshop és Discord gombok */
+/* Gombok */
 .button-container {
     display: flex;
-    justify-content: space-between; /* Gombok balra és jobbra */
+    justify-content: space-between;
     width: 100%;
-    max-width: 500px; /* Gombok ne terjedjenek túl szélesre */
+    max-width: 500px;
     margin: 0 auto;
     gap: 20px;
 }
@@ -118,14 +113,10 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Animáció a háttérben */
+/* Háttér animáció */
 @keyframes moving-stripes {
-    0% {
-        background-position: -200% 0;
-    }
-    100% {
-        background-position: 200% 0;
-    }
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
 }
 
 body {

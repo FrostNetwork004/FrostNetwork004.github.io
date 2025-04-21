@@ -1,86 +1,90 @@
-/* Alap stílusok */
-body {
+/* Alap stílus */
+* {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: #fff;
-    background: linear-gradient(135deg, #1a1a1a 10%, #1b3b1b 50%, #0a1f0a 90%);
-    background-size: 400% 400%;
-    animation: moving-stripes 5s linear infinite;
-    padding-top: 100px; /* hely a fix fejlécnek */
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Fejléc stílusok */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-size: 400% 400%;
+    animation: gradientFlow 15s ease infinite;
+    color: white;
+    min-height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Fejléc fixen fent + glassmorphism */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
+    backdrop-filter: blur(15px);
+    background: rgba(15, 15, 15, 0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background: rgba(10, 31, 10, 0.8); /* Üveg hatás */
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    transition: background 0.3s ease;
+    padding: 25px 60px;
+    transition: all 0.3s ease;
 }
 
 .logo h1 {
     font-size: 2.5rem;
-    font-weight: bold;
-    color: #fff;
-    margin: 0;
+    color: #00ffb7;
+    text-shadow: 0 0 10px #00ffb7;
 }
 
-/* Navigáció */
+/* Menü */
 .nav-bar ul {
     list-style: none;
     display: flex;
     gap: 25px;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-bar a {
-    color: #fff;
-    text-decoration: none;
+    color: white;
     font-size: 1.2rem;
-    padding: 10px 18px;
-    border-radius: 8px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
     transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
 }
 
-.nav-bar a:hover, .nav-bar a.active {
-    background: linear-gradient(45deg, #4CAF50, #45a049);
-    color: #fff;
-    transform: translateY(-2px);
+.nav-bar a:hover {
+    background: rgba(0,255,183,0.2);
+    box-shadow: 0 0 10px #00ffb7;
 }
 
 /* Fő szekció */
 .main-section {
     text-align: center;
+    max-width: 900px;
     padding: 60px 20px;
-    background: linear-gradient(135deg, #111, #3a4e3a);
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    margin: 20px;
 }
 
 .main-section h2 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #fff;
+    color: #ffffff;
 }
 
 .main-section p {
-    font-size: 1.4rem;
-    max-width: 800px;
-    margin: 0 auto 40px;
+    font-size: 1.2rem;
     color: #ccc;
+    margin-bottom: 40px;
 }
 
 /* Gombok */
@@ -91,67 +95,63 @@ body {
     gap: 20px;
 }
 
-.webshop-button, .discord-button {
-    font-size: 1.5rem;
-    padding: 15px 30px;
+.webshop-button,
+.discord-button {
+    font-size: 1.3rem;
+    padding: 15px 35px;
     border-radius: 30px;
-    text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
     border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
 .webshop-button {
-    background: linear-gradient(135deg, #4CAF50, #2e7d32);
-    color: white;
+    background: linear-gradient(135deg, #00ffb7, #00c8ff);
 }
 
 .webshop-button:hover {
-    background: linear-gradient(135deg, #66bb6a, #388e3c);
-    transform: scale(1.07);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00ffb7;
 }
 
 .discord-button {
-    background: linear-gradient(135deg, #5865F2, #3c4bd8);
-    color: white;
+    background: linear-gradient(135deg, #7289da, #5b6eae);
 }
 
 .discord-button:hover {
-    background: linear-gradient(135deg, #7882f9, #5a6ae0);
-    transform: scale(1.07);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #7289da;
 }
 
-/* Animáció a háttérben */
-@keyframes moving-stripes {
-    0% {
-        background-position: -200% 0;
-    }
-    100% {
-        background-position: 200% 0;
-    }
+/* Háttér animáció */
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* Mobilbarát */
+/* Mobil nézet */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
-        padding: 15px;
+        padding: 15px 20px;
+        text-align: center;
     }
 
     .nav-bar ul {
         flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        margin-top: 10px;
+        gap: 10px;
     }
 
     .main-section h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .button-container {
         flex-direction: column;
-        align-items: center;
     }
 }
